@@ -9,9 +9,9 @@ export function ServicesSection() {
       title="Forestry Mulching & Brush Clearing Services"
       intro="From a grown-up residential lot to a long-neglected trail, Fox Run Forestry provides practical brush control and land management solutions for coastal North Carolina properties."
     >
-      <div className="mb-14 grid gap-8 text-base leading-8 text-stone-600 lg:grid-cols-2">
+      <div className="mb-14 grid gap-8 text-base leading-8 text-brand-muted lg:grid-cols-2">
         <div>
-          <h3 className="font-display text-2xl font-semibold text-forest-950">
+          <h3 className="font-display text-2xl font-semibold text-brand-cream">
             A cleaner way to reclaim overgrown land
           </h3>
           <p className="mt-4">
@@ -28,11 +28,11 @@ export function ServicesSection() {
             disruption than the job requires.
           </p>
         </div>
-        <div className="rounded-3xl bg-sand-100 p-7 sm:p-9">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-moss-700">
+        <div className="rounded-3xl border border-brand-olive/30 bg-brand-card p-7 sm:p-9">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-orange">
             Common projects
           </p>
-          <p className="mt-4 text-forest-950">
+          <p className="mt-4 text-brand-cream">
             Brush removal, pasture reclamation, hunting property access roads,
             fence lines, utility easements, residential lots, trails, driveway
             edges, and storm-damaged overgrowth.
@@ -49,31 +49,31 @@ export function ServicesSection() {
         {siteConfig.services.map((service, index) => (
           <article
             key={service.slug}
-            className="group rounded-3xl border border-forest-900/10 bg-white p-7 transition hover:-translate-y-1 hover:border-moss-700/30 hover:shadow-xl sm:p-9"
+            className="group rounded-3xl border border-brand-olive/30 bg-brand-card p-7 transition hover:-translate-y-1 hover:border-brand-orange/60 hover:shadow-xl sm:p-9"
           >
             <div className="flex items-start justify-between gap-4">
-              <span className="text-xs font-bold tracking-[0.18em] text-moss-700">
+              <span className="text-xs font-bold tracking-[0.18em] text-brand-orange">
                 0{index + 1}
               </span>
-              <span className="grid size-10 place-items-center rounded-full bg-sand-100 text-forest-900 transition group-hover:bg-lime-300" aria-hidden="true">
+              <span className="grid size-10 place-items-center rounded-full bg-brand-dark text-brand-cream transition group-hover:bg-brand-orange" aria-hidden="true">
                 ↗
               </span>
             </div>
             <h3 className="mt-8 font-display text-2xl font-semibold">
               {service.title}
             </h3>
-            <p className="mt-4 leading-7 text-stone-600">
+            <p className="mt-4 leading-7 text-brand-muted">
               {service.shortDescription}
             </p>
             <ul className="mt-6 space-y-3">
               {service.benefits.map((benefit) => (
-                <li key={benefit} className="flex gap-3 text-sm font-semibold text-forest-900">
-                  <span className="text-moss-700" aria-hidden="true">✓</span>
+                <li key={benefit} className="flex gap-3 text-sm font-semibold text-brand-cream">
+                  <span className="text-brand-orange" aria-hidden="true">✓</span>
                   {benefit}
                 </li>
               ))}
             </ul>
-            <p className="mt-6 border-t border-forest-900/10 pt-5 text-sm leading-6 text-stone-500">
+            <p className="mt-6 border-t border-brand-olive/30 pt-5 text-sm leading-6 text-brand-muted">
               {service.idealClients}
             </p>
           </article>
