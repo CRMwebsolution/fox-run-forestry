@@ -13,19 +13,19 @@ export function ServiceAreasSection() {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         {siteConfig.serviceAreas.map((area) => (
-          <article key={area.name} className="rounded-3xl border border-forest-900/10 bg-cream-50 p-7 sm:p-8">
+          <article key={area.name} className="rounded-3xl border border-brand-olive/30 bg-brand-dark p-7 sm:p-8">
             <h3 className="font-display text-2xl font-semibold">{area.name}</h3>
-            <p className="mt-4 leading-7 text-stone-600">{area.description}</p>
+            <p className="mt-4 leading-7 text-brand-muted">{area.description}</p>
           </article>
         ))}
       </div>
 
-      <div className="mt-12 grid gap-8 rounded-3xl bg-forest-900 p-7 text-white sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
+      <div className="mt-12 grid gap-8 rounded-3xl border border-brand-olive/30 bg-brand-dark p-7 text-brand-cream sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
         <div className="max-w-3xl">
           <h3 className="font-display text-2xl font-semibold sm:text-3xl">
             Not sure if your property is within the service area?
           </h3>
-          <p className="mt-4 leading-7 text-sand-100/80">
+          <p className="mt-4 leading-7 text-brand-muted">
             Call, text, or email with the property location and a short
             description of the work. Flexible scheduling is available, and Fox
             Run Forestry can let you know whether a site visit makes sense.
