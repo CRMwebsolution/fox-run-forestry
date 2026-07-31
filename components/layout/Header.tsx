@@ -12,28 +12,14 @@ export function Header() {
       <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-5 sm:gap-6 sm:px-8 lg:px-12">
         <Link
           href="/"
-          className="group flex items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-olive"
+          className="group shrink-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-olive"
           aria-label={`${siteConfig.name} home`}
         >
-          <span
-            aria-hidden="true"
-            className="grid size-10 place-items-center rounded-full bg-brand-card text-brand-orange"
-          >
-            <svg viewBox="0 0 24 24" className="size-6" fill="none">
-              <path
-                d="M12 3 7 10h3l-4 6h5v5h2v-5h5l-4-6h3l-5-7Z"
-                fill="currentColor"
-              />
-            </svg>
-          </span>
-          <span>
-            <span className="block font-display text-lg font-semibold leading-none text-brand-cream">
-              Fox Run
-            </span>
-            <span className="mt-1 block text-[10px] font-bold uppercase tracking-[0.24em] text-brand-olive">
-              Forestry LLC
-            </span>
-          </span>
+          <img
+            src={siteConfig.brandAssets.logo}
+            alt="Fox Run Forestry LLC logo"
+            className="h-10 w-[118px] object-contain object-left sm:h-12 sm:w-[170px]"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
