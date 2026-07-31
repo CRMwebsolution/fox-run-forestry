@@ -34,6 +34,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.domain,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.brandAssets.hero,
+        alt: "Fox Run Forestry LLC forestry mulching equipment in Eastern North Carolina",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -46,8 +52,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: siteConfig.brandAssets.icon,
+    shortcut: siteConfig.brandAssets.icon,
+    apple: siteConfig.brandAssets.icon,
   },
 };
 
@@ -65,6 +72,8 @@ const localBusinessJsonLd = {
   description: siteConfig.description,
   telephone: siteConfig.contact.primaryPhone,
   email: siteConfig.contact.email,
+  image: siteConfig.brandAssets.hero,
+  logo: siteConfig.brandAssets.logo,
   areaServed: siteConfig.serviceAreas.map((area) => ({
     "@type": area.name.includes("County") ? "AdministrativeArea" : "Place",
     name: area.name,
