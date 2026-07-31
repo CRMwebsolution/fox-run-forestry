@@ -15,14 +15,16 @@ export function Header() {
           className="group shrink-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-olive"
           aria-label={`${siteConfig.name} home`}
         >
-          {/* Increased container height and width so the bottom/side text fits */}
-          <span className="relative block h-16 w-[180px] overflow-hidden sm:h-18 sm:w-[210px] lg:h-20 lg:w-[240px]">
-            <img
-              src={siteConfig.brandAssets.logo}
-              alt="Fox Run Forestry LLC logo"
-              className="absolute left-1/2 top-1/2 w-[340px] max-w-none -translate-x-1/2 -translate-y-1/2 scale-[0.75] sm:w-[380px]"
-            />
-          </span>
+          {/* Increased container height and width as before */}
+<span className="relative block h-16 w-[180px] overflow-hidden sm:h-18 sm:w-[210px] lg:h-20 lg:w-[240px]">
+  <img
+    src={siteConfig.brandAssets.logo}
+    alt="Fox Run Forestry LLC logo"
+    {/* MODIFIED PORTION IS BELOW */}
+    className="absolute left-1/2 top-[40%] w-[340px] max-w-none -translate-x-1/2 -translate-y-[45%] scale-[0.70] sm:w-[380px]"
+    {/* Changes: top-[40%] (vs 50%) and -translate-y-[45%] (vs 50%) and slightly lower scale to ensure no side clipping */}
+  />
+</span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
