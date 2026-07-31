@@ -6,11 +6,13 @@ export function Footer() {
     <footer className="bg-brand-dark py-12 text-brand-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 md:grid-cols-3 lg:px-12">
         <div>
-          <img
-            src={siteConfig.brandAssets.logo}
-            alt="Fox Run Forestry LLC logo"
-            className="h-auto w-52 object-contain object-left"
-          />
+          <div className="relative h-28 w-64 overflow-hidden sm:h-32 sm:w-72">
+            <img
+              src={siteConfig.brandAssets.logo}
+              alt="Fox Run Forestry LLC logo"
+              className="absolute left-1/2 top-1/2 w-[430px] max-w-none -translate-x-1/2 -translate-y-1/2 sm:w-[480px]"
+            />
+          </div>
           <p className="mt-3 max-w-sm text-sm leading-7 text-brand-muted">
             Forestry mulching, brush control, and practical land management for
             Carteret and Craven Counties.
