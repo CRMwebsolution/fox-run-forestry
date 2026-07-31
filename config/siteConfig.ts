@@ -22,6 +22,11 @@ export type SiteConfig = {
   domain: string;
   description: string;
   tagline: string;
+  brandAssets: {
+    hero: string;
+    logo: string;
+    icon: string;
+  };
   keywords: string[];
   contact: {
     primaryPhone: string;
@@ -46,6 +51,14 @@ export const siteConfig: SiteConfig = {
     "Fox Run Forestry LLC provides professional forestry mulching, brush clearing, and land management services in Newport, Carteret County, and Craven County, North Carolina.",
   tagline:
     "Specializing in forestry mulching and brush control, serving Carteret County and surrounding areas.",
+  brandAssets: {
+    hero:
+      "https://fhyzsisluszpfhlngiyb.supabase.co/storage/v1/object/public/other_sites/FoxRunForestry/hero.jpg",
+    logo:
+      "https://fhyzsisluszpfhlngiyb.supabase.co/storage/v1/object/public/other_sites/FoxRunForestry/Logo.jpg",
+    icon:
+      "https://fhyzsisluszpfhlngiyb.supabase.co/storage/v1/object/public/other_sites/FoxRunForestry/icon.jpg",
+  },
   keywords: [
     "forestry mulching",
     "brush clearing",
