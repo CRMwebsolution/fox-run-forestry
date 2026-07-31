@@ -19,7 +19,7 @@ export function Header() {
             <img
               src={siteConfig.brandAssets.logo}
               alt="Fox Run Forestry LLC logo"
-              className="absolute left-1/2 top-1/2 w-[188px] max-w-none -translate-x-1/2 -translate-y-1/2 sm:w-[250px] lg:w-[315px]"
+              className="absolute left-1/2 top-1/2 w-[430px] max-w-none -translate-x-1/2 -translate-y-1/2 scale-[0.85] sm:w-[480px]"
             />
           </span>
         </Link>
