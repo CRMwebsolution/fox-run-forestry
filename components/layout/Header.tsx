@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/config/siteConfig";
-import { Button } from "@/components/ui/Button";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,13 +48,13 @@ export function Header() {
           ))}
         </nav>
 
-        <Button
+        <a
           href={`tel:${siteConfig.contact.primaryPhoneHref}`}
-          className="hidden sm:inline-flex"
+          className="hidden rounded-sm text-sm font-bold text-forest-950 transition hover:text-moss-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-700 lg:inline-flex"
           aria-label={`Call Fox Run Forestry at ${siteConfig.contact.primaryPhone}`}
         >
-          Call Now
-        </Button>
+          Call {siteConfig.contact.primaryPhone}
+        </a>
 
         <div
           className="relative lg:hidden"
