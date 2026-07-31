@@ -10,11 +10,11 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-lime-300 text-forest-950 hover:bg-lime-200 focus-visible:ring-lime-300",
+    "bg-brand-orange text-brand-cream hover:bg-brand-orange-hover focus-visible:ring-brand-orange",
   secondary:
-    "border border-forest-700 bg-white text-forest-950 hover:bg-sand-100 focus-visible:ring-forest-700",
+    "border border-brand-olive/40 bg-brand-card text-brand-cream hover:bg-brand-olive/30 focus-visible:ring-brand-olive",
   light:
-    "border border-white/30 bg-white/10 text-white hover:bg-white/20 focus-visible:ring-white",
+    "border border-brand-olive/50 bg-brand-card/70 text-brand-cream hover:bg-brand-olive/30 focus-visible:ring-brand-olive",
 };
 
 export function Button({
