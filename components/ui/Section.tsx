@@ -20,9 +20,9 @@ export function Section({
   tone = "light",
 }: SectionProps) {
   const tones = {
-    light: "bg-white text-forest-950",
-    sand: "bg-sand-100 text-forest-950",
-    dark: "bg-forest-950 text-white",
+    light: "bg-brand-dark text-brand-cream",
+    sand: "bg-brand-card text-brand-cream",
+    dark: "bg-brand-dark text-brand-cream",
   };
 
   return (
@@ -34,11 +34,7 @@ export function Section({
         {(eyebrow || title || intro) && (
           <div className="mb-12 max-w-3xl">
             {eyebrow && (
-              <p
-                className={`mb-4 text-xs font-bold uppercase tracking-[0.22em] ${
-                  tone === "dark" ? "text-lime-300" : "text-moss-700"
-                }`}
-              >
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-brand-orange">
                 {eyebrow}
               </p>
             )}
@@ -48,11 +44,7 @@ export function Section({
               </h2>
             )}
             {intro && (
-              <p
-                className={`mt-5 text-base leading-8 sm:text-lg ${
-                  tone === "dark" ? "text-sand-100/80" : "text-stone-600"
-                }`}
-              >
+              <p className="mt-5 text-base leading-8 text-brand-muted sm:text-lg">
                 {intro}
               </p>
             )}
