@@ -54,16 +54,16 @@ export function FAQSection() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <div className="mx-auto max-w-4xl divide-y divide-forest-900/15 border-y border-forest-900/15">
+      <div className="mx-auto max-w-4xl divide-y divide-brand-olive/30 border-y border-brand-olive/30">
         {faqs.map((faq) => (
           <details key={faq.question} className="group py-2">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-6 rounded-lg py-5 text-left font-display text-xl font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-moss-700">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-6 rounded-lg py-5 text-left font-display text-xl font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange">
               {faq.question}
-              <span className="grid size-9 shrink-0 place-items-center rounded-full border border-forest-900/20 font-sans text-lg transition group-open:rotate-45" aria-hidden="true">
+              <span className="grid size-9 shrink-0 place-items-center rounded-full border border-brand-olive/40 font-sans text-lg text-brand-orange transition group-open:rotate-45" aria-hidden="true">
                 +
               </span>
             </summary>
-            <p className="max-w-3xl pb-6 pr-12 leading-8 text-stone-600">{faq.answer}</p>
+            <p className="max-w-3xl pb-6 pr-12 leading-8 text-brand-muted">{faq.answer}</p>
           </details>
         ))}
       </div>
