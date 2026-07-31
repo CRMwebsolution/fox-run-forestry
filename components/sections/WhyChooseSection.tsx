@@ -27,19 +27,19 @@ export function WhyChooseSection() {
     >
       <div className="grid gap-6 lg:grid-cols-3">
         {reasons.map((reason, index) => (
-          <article key={reason.title} className="border-t-2 border-moss-700 pt-6">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-moss-700">
+          <article key={reason.title} className="border-t-2 border-brand-olive pt-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-orange">
               Reason 0{index + 1}
             </p>
             <h3 className="mt-4 font-display text-2xl font-semibold">{reason.title}</h3>
-            <p className="mt-4 leading-7 text-stone-600">{reason.description}</p>
+            <p className="mt-4 leading-7 text-brand-muted">{reason.description}</p>
           </article>
         ))}
       </div>
 
-      <div className="mt-16 grid gap-8 border-t border-forest-900/10 pt-12 text-base leading-8 text-stone-600 lg:grid-cols-2">
+      <div className="mt-16 grid gap-8 border-t border-brand-olive/30 pt-12 text-base leading-8 text-brand-muted lg:grid-cols-2">
         <div>
-          <h3 className="font-display text-2xl font-semibold text-forest-950">
+          <h3 className="font-display text-2xl font-semibold text-brand-cream">
             Built around local relationships
           </h3>
           <p className="mt-4">
@@ -51,7 +51,7 @@ export function WhyChooseSection() {
           </p>
         </div>
         <div>
-          <h3 className="font-display text-2xl font-semibold text-forest-950">
+          <h3 className="font-display text-2xl font-semibold text-brand-cream">
             Flexible scheduling, honest expectations
           </h3>
           <p className="mt-4">
