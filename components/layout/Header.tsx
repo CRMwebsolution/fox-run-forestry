@@ -15,11 +15,13 @@ export function Header() {
           className="group shrink-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-olive"
           aria-label={`${siteConfig.name} home`}
         >
-          <img
-            src={siteConfig.brandAssets.logo}
-            alt="Fox Run Forestry LLC logo"
-            className="h-10 w-[118px] object-contain object-left sm:h-12 sm:w-[170px]"
-          />
+          <span className="relative block h-12 w-[112px] overflow-hidden sm:h-14 sm:w-[150px] lg:h-16 lg:w-[190px]">
+            <img
+              src={siteConfig.brandAssets.logo}
+              alt="Fox Run Forestry LLC logo"
+              className="absolute left-1/2 top-1/2 w-[188px] max-w-none -translate-x-1/2 -translate-y-1/2 sm:w-[250px] lg:w-[315px]"
+            />
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
