@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-forest-900/10 bg-cream-50/95 backdrop-blur">
-      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-5 sm:gap-6 sm:px-8 lg:px-12">
         <Link
           href="/"
           className="group flex items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-700"
@@ -47,6 +47,14 @@ export function Header() {
             </Link>
           ))}
         </nav>
+
+        <a
+          href={`tel:${siteConfig.contact.primaryPhoneHref}`}
+          className="inline-flex min-h-10 items-center justify-center rounded-full bg-lime-300 px-4 py-2 text-xs font-bold tracking-wide text-forest-950 transition hover:bg-lime-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-300 focus-visible:ring-offset-2 sm:min-h-12 sm:px-6 sm:py-3 sm:text-sm lg:hidden"
+          aria-label={`Call Fox Run Forestry at ${siteConfig.contact.primaryPhone}`}
+        >
+          Call Now
+        </a>
 
         <a
           href={`tel:${siteConfig.contact.primaryPhoneHref}`}
