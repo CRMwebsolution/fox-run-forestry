@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-forest-950: #10271f;
-  --color-forest-900: #17372d;
-  --color-forest-700: #285745;
-  --color-moss-700: #527141;
-  --color-lime-300: #cbe66b;
-  --color-bark-500: #8a6646;
-  --color-sand-100: #eee9dd;
-  --color-cream-50: #faf8f2;
+  --color-forest-950: #0b0c09;
+  --color-forest-900: #17180f;
+  --color-forest-700: #3e411c;
+  --color-moss-700: #5a5d23;
+  --color-lime-200: #ff9c3a;
+  --color-lime-300: #f08018;
+  --color-bark-500: #a95b22;
+  --color-sand-100: #e7dfd1;
+  --color-cream-50: #f4efe6;
   --font-sans: var(--font-manrope);
   --font-display: var(--font-lora);
 }
@@ -20,14 +21,14 @@
 
 body {
   margin: 0;
-  background: #faf8f2;
-  color: #10271f;
+  background: #f4efe6;
+  color: #0b0c09;
   font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
 }
 
 ::selection {
-  background: #cbe66b;
-  color: #10271f;
+  background: #f08018;
+  color: #0b0c09;
 }
 
 summary::-webkit-details-marker {
