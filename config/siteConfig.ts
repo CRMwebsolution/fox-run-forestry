@@ -31,8 +31,6 @@ export type SiteConfig = {
   contact: {
     primaryPhone: string;
     primaryPhoneHref: string;
-    secondaryPhone: string;
-    secondaryPhoneHref: string;
     email: string;
     serviceArea: string;
   };
@@ -74,8 +72,6 @@ export const siteConfig: SiteConfig = {
   contact: {
     primaryPhone: "(252) 241-6969",
     primaryPhoneHref: "+12522416969",
-    secondaryPhone: "570-956-2081",
-    secondaryPhoneHref: "+15709562081",
     email: "foxrunforestry@gmail.com",
     serviceArea:
       "Newport, Carteret County, Craven County, and surrounding Eastern North Carolina communities",
