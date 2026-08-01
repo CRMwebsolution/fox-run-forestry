@@ -74,8 +74,8 @@ export const siteConfig: SiteConfig = {
   contact: {
     primaryPhone: "(252) 241-6969",
     primaryPhoneHref: "+12522416969",
-    secondaryPhone: "252-241-6969",
-    secondaryPhoneHref: "+12522416969",
+    secondaryPhone: "570-956-2081",
+    secondaryPhoneHref: "+15709562081",
     email: "foxrunforestry@gmail.com",
     serviceArea:
       "Newport, Carteret County, Craven County, and surrounding Eastern North Carolina communities",
@@ -86,7 +86,7 @@ export const siteConfig: SiteConfig = {
   navigation: [
     { label: "Services", href: "#services", isAnchor: true },
     { label: "Areas Served", href: "#areas-served", isAnchor: true },
-    { label: "Projects", href: "#projects", isAnchor: true },
+    { label: "Gallery", href: "#gallery", isAnchor: true },
     { label: "FAQ", href: "#faq", isAnchor: true },
     { label: "Free Quote", href: "#contact", isAnchor: true },
   ],
