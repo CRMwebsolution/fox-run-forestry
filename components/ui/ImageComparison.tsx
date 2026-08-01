@@ -45,7 +45,7 @@ export function ImageComparison({
     setIsDragging(false);
   }
 
-  function handleKeyDown(event: KeyboardEvent<HTMLDivElement>) {
+  function handleKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
     const step = event.shiftKey ? 10 : 2;
 
     if (event.key === "ArrowLeft" || event.key === "ArrowDown") {
