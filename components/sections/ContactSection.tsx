@@ -26,12 +26,6 @@ export function ContactSection() {
               </a>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-orange">Alternate phone</p>
-              <a className="mt-2 block font-display text-2xl font-semibold hover:text-brand-orange" href={`tel:${siteConfig.contact.secondaryPhoneHref}`}>
-                {siteConfig.contact.secondaryPhone}
-              </a>
-            </div>
-            <div>
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-orange">Email</p>
               <a className="mt-2 block break-all text-lg font-semibold hover:text-brand-orange" href={`mailto:${siteConfig.contact.email}`}>
                 {siteConfig.contact.email}
