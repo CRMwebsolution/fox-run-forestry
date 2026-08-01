@@ -1,78 +1,79 @@
 import { Section } from "@/components/ui/Section";
+import { ImageComparison } from "@/components/ui/ImageComparison";
+
+const storageBaseUrl =
+  "https://fhyzsisluszpfhlngiyb.supabase.co/storage/v1/object/public/other_sites/FoxRunForestry";
 
 const projects = [
   {
-    type: "Hunting property",
-    title: "Access road through dense undergrowth",
+    folder: "1",
+    title: "One-acre underbrush cleanup",
     description:
-      "A practical clearing plan can reopen a route for trucks, equipment, and foot traffic while preserving the surrounding woods and habitat.",
-    result: "Better access without clearing the entire property",
-    visual: "from-brand-olive to-brand-dark",
+      "We cleared one acre in Newport, removing the underbrush and dead pines to leave the property cleaner, safer, and easier to use.",
+    alt: "one-acre forestry mulching and dead pine removal project in Newport NC",
   },
   {
-    type: "Newport property",
-    title: "Repeat-client brush control",
+    folder: "2",
+    title: "Making more room on 20 acres",
     description:
-      "Routine mulching can keep fast coastal growth from taking back fence lines, lot edges, trails, and areas that have already been reclaimed.",
-    result: "A maintained property that stays easier to use",
-    visual: "from-brand-olive to-brand-card",
+      "A repeat client brought us back to open up this 20-acre Newport parcel, creating more usable ground for a future front and back yard.",
+    alt: "20-acre repeat-client land clearing project in Newport NC",
   },
   {
-    type: "Residential lot",
-    title: "Overgrowth removal before improvements",
+    folder: "3",
+    title: "More room for the kids to play",
     description:
-      "Removing brush and saplings can expose the shape of the land before fencing, landscaping, surveying, driveway work, or future construction.",
-    result: "Clearer boundaries and a cleaner starting point",
-    visual: "from-brand-orange to-brand-card",
+      "After building their new home in Newport, this family wanted more of the property opened up. We cleared the overgrowth and gave the kids room to enjoy the yard.",
+    alt: "residential brush clearing around a newly built home in Newport NC",
+  },
+  {
+    folder: "4",
+    title: "Boundary access for an accurate survey",
+    description:
+      "This newly purchased parcel was packed with small pines. We cut approximate boundary lines so the surveyor could get in and confirm the property lines accurately.",
+    alt: "small pine clearing for property boundary surveying in Eastern North Carolina",
   },
 ];
 
 export function ProjectsSection() {
   return (
     <Section
-      id="projects"
+      id="gallery"
       eyebrow="Work on the ground"
-      title="Recent Projects & Transformations"
-      intro="The right clearing plan depends on what the property needs to do next. These common Eastern North Carolina project types show how forestry mulching can improve access, visibility, and long-term use."
+      title="Before & After Project Gallery"
+      intro="Drag each slider to see what focused forestry mulching and brush control can do for a property. These are real Fox Run Forestry projects completed around Newport and Eastern North Carolina."
       tone="dark"
     >
-      <div className="grid gap-6 lg:grid-cols-3">
+      <p className="mb-8 text-sm font-semibold text-brand-orange sm:mb-10">
+        Drag the handle, tap anywhere on a photo, or use the arrow keys to compare.
+      </p>
+
+      <div className="grid gap-8 lg:grid-cols-2">
         {projects.map((project, index) => (
-          <article key={project.title} className="overflow-hidden rounded-3xl border border-brand-olive/30 bg-brand-card text-brand-cream">
-            <div
-              className={`relative h-56 overflow-hidden bg-gradient-to-br ${project.visual}`}
-              role="img"
-              aria-label={`${project.title}, forestry mulching and brush control project in the Newport and Carteret County NC area`}
-            >
-              <div className="absolute inset-x-0 bottom-0 h-24 bg-brand-dark/40" />
-              <div className="absolute bottom-0 left-[16%] h-44 w-3 rounded-t-full bg-brand-orange" />
-              <div className="absolute bottom-0 left-[44%] h-52 w-4 rounded-t-full bg-brand-orange" />
-              <div className="absolute bottom-0 right-[18%] h-40 w-3 rounded-t-full bg-brand-orange" />
-              <div className="absolute -left-10 top-4 size-44 rounded-full bg-brand-olive/90" />
-              <div className="absolute left-[28%] -top-10 size-56 rounded-full bg-brand-olive/90" />
-              <div className="absolute -right-8 top-5 size-48 rounded-full bg-brand-olive/80" />
-              <span className="absolute left-5 top-5 rounded-full bg-brand-dark px-3 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-cream">
-                {project.type}
-              </span>
-              <span className="absolute bottom-5 right-5 font-display text-5xl font-semibold text-brand-cream/25">
-                0{index + 1}
-              </span>
-            </div>
-            <div className="p-7">
-              <h3 className="font-display text-2xl font-semibold">{project.title}</h3>
-              <p className="mt-4 leading-7 text-brand-muted">{project.description}</p>
-              <p className="mt-6 border-t border-brand-olive/30 pt-5 text-sm font-bold text-brand-orange">
-                {project.result}
+          <article
+            key={project.folder}
+            className="overflow-hidden rounded-3xl border border-brand-olive/30 bg-brand-card text-brand-cream shadow-2xl"
+          >
+            <ImageComparison
+              beforeImage={`${storageBaseUrl}/${project.folder}/before.jpg`}
+              afterImage={`${storageBaseUrl}/${project.folder}/after.jpg`}
+              altBefore={`Before: ${project.alt}`}
+              altAfter={`After: ${project.alt}`}
+            />
+            <div className="p-6 sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-orange">
+                Newport project 0{index + 1}
+              </p>
+              <h3 className="mt-3 font-display text-2xl font-semibold sm:text-3xl">
+                {project.title}
+              </h3>
+              <p className="mt-4 leading-7 text-brand-muted">
+                {project.description}
               </p>
             </div>
           </article>
         ))}
       </div>
-      <p className="mt-8 max-w-3xl text-sm leading-7 text-brand-muted">
-        Project descriptions are representative of the types of work Fox Run
-        Forestry performs. Site conditions, access, acreage, and results vary by
-        property.
-      </p>
     </Section>
   );
 }
