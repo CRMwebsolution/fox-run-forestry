@@ -10,7 +10,7 @@ export function Footer() {
             <img
               src={siteConfig.brandAssets.logo}
               alt="Fox Run Forestry LLC logo"
-              className="absolute left-1/2 top-1/2 w-[430px] max-w-none -translate-x-1/2 -translate-y-1/2 scale-[0.85] sm:w-[480px]"
+              className="absolute left-1/2 top-1/2 w-[430px] max-w-none -translate-x-1/2 -translate-y-1/2 sm:w-[480px]"
             />
           </div>
           <p className="mt-3 max-w-sm text-sm leading-7 text-brand-muted">
@@ -26,11 +26,6 @@ export function Footer() {
             <p>
               <a className="hover:text-brand-cream" href={`tel:${siteConfig.contact.primaryPhoneHref}`}>
                 {siteConfig.contact.primaryPhone}
-              </a>
-            </p>
-            <p>
-              <a className="hover:text-brand-cream" href={`tel:${siteConfig.contact.secondaryPhoneHref}`}>
-                {siteConfig.contact.secondaryPhone}
               </a>
             </p>
             <p>
