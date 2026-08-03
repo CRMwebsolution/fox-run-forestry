@@ -30,6 +30,44 @@ create table public."FoxRunForestry" (
 
 alter table public."FoxRunForestry" enable row level security;
 
+create or replace function public.enforce_fox_run_forestry_published_limit()
+returns trigger
+language plpgsql
+set search_path = ''
+as $$
+declare
+  current_published_count integer;
+begin
+  if new.published then
+    perform pg_catalog.pg_advisory_xact_lock(2522416969::bigint);
+
+    select count(*)
+    into current_published_count
+    from public."FoxRunForestry"
+    where published = true
+      and (tg_op = 'INSERT' or id <> new.id);
+
+    if current_published_count >= 5 then
+      raise exception using
+        errcode = 'P0001',
+        message = 'No more than 5 gallery items can be published at once.';
+    end if;
+  end if;
+
+  return new;
+end;
+$$;
+
+revoke all
+on function public.enforce_fox_run_forestry_published_limit()
+from public, anon, authenticated;
+
+create trigger enforce_fox_run_forestry_published_limit
+before insert or update of published
+on public."FoxRunForestry"
+for each row
+execute function public.enforce_fox_run_forestry_published_limit();
+
 revoke insert, update, delete, truncate, references, trigger
 on table public."FoxRunForestry"
 from anon;
