@@ -1,4 +1,5 @@
-import type { Metadata, Viewport } from "next";\nimport { Analytics } from "@vercel/analytics/next";
+import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Lora, Manrope } from "next/font/google";
 import { Layout } from "@/components/layout/Layout";
 import { siteConfig } from "@/config/siteConfig";
@@ -100,6 +101,7 @@ export default function RootLayout({
       </head>
       <body className={`${manrope.variable} ${lora.variable} antialiased`}>
         <Layout>{children}</Layout>
+        <Analytics />
       </body>
     </html>
   );
