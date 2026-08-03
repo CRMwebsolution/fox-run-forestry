@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next";\nimport { Analytics } from "@vercel/analytics/next";
 import { Lora, Manrope } from "next/font/google";
 import { Layout } from "@/components/layout/Layout";
 import { siteConfig } from "@/config/siteConfig";
