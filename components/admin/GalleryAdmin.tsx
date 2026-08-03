@@ -33,6 +33,8 @@ const emptyForm: FormState = {
 const inputClass =
   "mt-2 w-full rounded-xl border border-brand-olive/40 bg-brand-dark px-4 py-3 text-brand-cream outline-none transition placeholder:text-brand-muted/60 focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/30";
 
+const MAX_PUBLISHED_ITEMS = 5;
+
 function getAdminStoragePath(url: string | null) {
   if (!url) return null;
   const marker = "/storage/v1/object/public/other_sites/";
@@ -83,6 +85,7 @@ export function GalleryAdmin() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const publishedCount = items.filter((item) => item.published).length;
 
   const loadItems = useCallback(async () => {
     setError("");
@@ -171,6 +174,16 @@ export function GalleryAdmin() {
 
     const uploadedUrls: string[] = [];
     try {
+      const otherPublishedItems = items.filter(
+        (item) => item.published && item.id !== editing?.id,
+      ).length;
+
+      if (form.published && otherPublishedItems >= MAX_PUBLISHED_ITEMS) {
+        throw new Error(
+          "Only 5 gallery projects can be published at once. Hide another project first.",
+        );
+      }
+
       let singleUrl = editing?.single_image_url ?? null;
       let beforeUrl = editing?.before_image_url ?? null;
       let afterUrl = editing?.after_image_url ?? null;
@@ -333,6 +346,9 @@ export function GalleryAdmin() {
             Gallery admin
           </h1>
           <p className="mt-2 text-brand-muted">Add, edit, publish, or remove project photos.</p>
+          <p className="mt-2 text-sm font-bold text-brand-cream">
+            {publishedCount} of {MAX_PUBLISHED_ITEMS} projects published
+          </p>
         </div>
         <button
           className="self-start rounded-xl border border-brand-olive/50 px-4 py-2 text-sm font-bold transition hover:border-brand-orange hover:text-brand-orange"
@@ -441,7 +457,12 @@ export function GalleryAdmin() {
                   checked={form.published}
                   onChange={(event) => setForm({ ...form, published: event.target.checked })}
                 />
-                Show on website
+                <span>
+                  Show on website
+                  <span className="block text-xs font-normal text-brand-muted">
+                    Maximum {MAX_PUBLISHED_ITEMS} published projects
+                  </span>
+                </span>
               </label>
             </div>
 
