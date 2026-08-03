@@ -47,7 +47,22 @@ export function Footer() {
       </div>
       <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-brand-olive/30 px-5 pt-6 text-xs text-brand-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
         <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-        <Link href="#top" className="hover:text-brand-cream">Back to top ↑</Link>
+        <div className="flex items-center gap-6">
+          <p>
+            Made by{" "}
+            <a
+              href="https://southernautomate.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-brand-cream transition hover:text-brand-orange"
+            >
+              SouthernAutomate
+            </a>
+          </p>
+          <Link href="#top" className="hover:text-brand-cream">
+            Back to top ↑
+          </Link>
+        </div>
       </div>
     </footer>
   );
