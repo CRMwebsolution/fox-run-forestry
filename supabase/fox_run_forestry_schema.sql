@@ -40,18 +40,19 @@ grant insert, update, delete on public."FoxRunForestry" to authenticated;
 create policy "Public can view published Fox Run gallery items"
 on public."FoxRunForestry"
 for select
-to anon, authenticated
+to anon
 using (published = true);
 
-create policy "Fox Run admins can view all gallery items"
+create policy "Authenticated users can view permitted Fox Run gallery items"
 on public."FoxRunForestry"
 for select
 to authenticated
 using (
-  coalesce(
-    ((select auth.jwt()) -> 'app_metadata' ->> 'fox_run_forestry_admin')::boolean,
-    false
-  )
+  published = true
+  or coalesce(
+      ((select auth.jwt()) -> 'app_metadata' ->> 'fox_run_forestry_admin')::boolean,
+      false
+    )
 );
 
 create policy "Fox Run admins can add gallery items"
