@@ -30,6 +30,10 @@ create table public."FoxRunForestry" (
 
 alter table public."FoxRunForestry" enable row level security;
 
+revoke insert, update, delete, truncate, references, trigger
+on table public."FoxRunForestry"
+from anon;
+
 grant select on public."FoxRunForestry" to anon, authenticated;
 grant insert, update, delete on public."FoxRunForestry" to authenticated;
 
@@ -197,4 +201,3 @@ values
     4,
     true
   );
-
