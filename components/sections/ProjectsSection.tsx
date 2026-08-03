@@ -11,21 +11,6 @@ const storageBaseUrl =
 
 const fallbackProjects: GalleryItem[] = [
   {
-    id: "fallback-1",
-    title: "One-acre underbrush cleanup",
-    caption:
-      "We cleared one acre in Newport, removing the underbrush and dead pines to leave the property cleaner, safer, and easier to use.",
-    image_type: "comparison",
-    single_image_url: null,
-    before_image_url: `${storageBaseUrl}/1/before.jpg`,
-    after_image_url: `${storageBaseUrl}/1/after.jpg`,
-    alt_text: "one-acre forestry mulching and dead pine removal project in Newport NC",
-    sort_order: 1,
-    published: true,
-    created_at: "",
-    updated_at: "",
-  },
-  {
     id: "fallback-2",
     title: "Making more room on 20 acres",
     caption:
@@ -110,7 +95,7 @@ export function ProjectsSection() {
       </p>
 
       <div className="grid gap-8 lg:grid-cols-2">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <article
             key={project.id}
             className="overflow-hidden rounded-3xl border border-brand-olive/30 bg-brand-card text-brand-cream shadow-2xl"
@@ -134,10 +119,7 @@ export function ProjectsSection() {
               </div>
             ) : null}
             <div className="p-6 sm:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-orange">
-                Newport project {String(index + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-3 font-display text-2xl font-semibold sm:text-3xl">
+              <h3 className="font-display text-2xl font-semibold sm:text-3xl">
                 {project.title}
               </h3>
               <p className="mt-4 leading-7 text-brand-muted">{project.caption}</p>
