@@ -201,16 +201,6 @@ insert into public."FoxRunForestry"
   (title, caption, image_type, before_image_url, after_image_url, alt_text, sort_order, published)
 values
   (
-    'One-acre underbrush cleanup',
-    'We cleared one acre in Newport, removing the underbrush and dead pines to leave the property cleaner, safer, and easier to use.',
-    'comparison',
-    'https://fhyzsisluszpfhlngiyb.supabase.co/storage/v1/object/public/other_sites/FoxRunForestry/1/before.jpg',
-    'https://fhyzsisluszpfhlngiyb.supabase.co/storage/v1/object/public/other_sites/FoxRunForestry/1/after.jpg',
-    'one-acre forestry mulching and dead pine removal project in Newport NC',
-    1,
-    true
-  ),
-  (
     'Making more room on 20 acres',
     'A repeat client brought us back to open up this 20-acre Newport parcel, creating more usable ground for a future front and back yard.',
     'comparison',
