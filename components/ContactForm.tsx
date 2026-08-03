@@ -19,7 +19,7 @@ const initialFields: FormFields = {
 };
 
 // PASTE YOUR N8N WEBHOOK URL HERE
-const N8N_WEBHOOK_URL = "https://n8n.southernautomate.com/webhook-test/2e3de640-d6dc-4fca-a404-0b71b9403227";
+const N8N_WEBHOOK_URL = "https://n8n.southernautomate.com/webhook/2e3de640-d6dc-4fca-a404-0b71b9403227";
 
 export function ContactForm() {
   const [fields, setFields] = useState(initialFields);
