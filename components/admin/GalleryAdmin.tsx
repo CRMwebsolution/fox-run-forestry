@@ -9,7 +9,6 @@ import type { GalleryItem } from "@/types/gallery";
 type FormState = {
   title: string;
   caption: string;
-  altText: string;
   imageType: "single" | "comparison";
   sortOrder: string;
   published: boolean;
@@ -21,7 +20,6 @@ type FormState = {
 const emptyForm: FormState = {
   title: "",
   caption: "",
-  altText: "",
   imageType: "comparison",
   sortOrder: "0",
   published: true,
@@ -146,7 +144,6 @@ export function GalleryAdmin() {
     setForm({
       title: item.title,
       caption: item.caption,
-      altText: item.alt_text,
       imageType: item.image_type,
       sortOrder: String(item.sort_order),
       published: item.published,
@@ -214,9 +211,7 @@ export function GalleryAdmin() {
       const payload = {
         title: form.title.trim(),
         caption: form.caption.trim(),
-        alt_text:
-          form.altText.trim() ||
-          `${form.title.trim()} forestry mulching project in Eastern North Carolina`,
+        alt_text: `${form.title.trim()} forestry mulching project in Eastern North Carolina`,
         image_type: form.imageType,
         single_image_url: singleUrl,
         before_image_url: beforeUrl,
@@ -385,16 +380,6 @@ export function GalleryAdmin() {
                 required
               />
             </label>
-            <label className="block text-sm font-bold">
-              Image description for accessibility
-              <input
-                className={inputClass}
-                value={form.altText}
-                onChange={(event) => setForm({ ...form, altText: event.target.value })}
-                placeholder="Forestry mulching project in Newport NC"
-              />
-            </label>
-
             <fieldset>
               <legend className="text-sm font-bold">Photo type</legend>
               <div className="mt-3 grid grid-cols-2 gap-3">
