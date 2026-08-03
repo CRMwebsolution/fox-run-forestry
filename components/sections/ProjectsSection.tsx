@@ -11,6 +11,21 @@ const storageBaseUrl =
 
 const fallbackProjects: GalleryItem[] = [
   {
+    id: "fallback-1",
+    title: "One-acre underbrush cleanup",
+    caption:
+      "We cleared one acre in Newport, removing the underbrush and dead pines to leave the property cleaner, safer, and easier to use.",
+    image_type: "comparison",
+    single_image_url: null,
+    before_image_url: `${storageBaseUrl}/1/before.jpg`,
+    after_image_url: `${storageBaseUrl}/1/after.jpg`,
+    alt_text: "one-acre forestry mulching and dead pine removal project in Newport NC",
+    sort_order: 1,
+    published: true,
+    created_at: "",
+    updated_at: "",
+  },
+  {
     id: "fallback-2",
     title: "Making more room on 20 acres",
     caption:
