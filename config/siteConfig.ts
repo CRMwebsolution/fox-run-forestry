@@ -36,6 +36,7 @@ export type SiteConfig = {
   };
   social: {
     facebook: string;
+    googleBusiness: string;
   };
   navigation: NavigationItem[];
   serviceAreas: ServiceArea[];
@@ -78,6 +79,7 @@ export const siteConfig: SiteConfig = {
   },
   social: {
     facebook: "https://www.facebook.com/foxrunforestryllc",
+    googleBusiness: "https://www.google.com/search?q=Fox+Run+Forestry+LLC",
   },
   navigation: [
     { label: "Services", href: "#services", isAnchor: true },
