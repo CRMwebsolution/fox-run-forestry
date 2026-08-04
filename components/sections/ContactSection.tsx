@@ -1,5 +1,4 @@
 import { ContactForm } from "@/components/ContactForm";
-import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/config/siteConfig";
 
 export function ContactSection() {
@@ -39,25 +38,6 @@ export function ContactSection() {
             scheduled flexibly based on location, conditions, and availability.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Button
-              href={siteConfig.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              Check Us Out on Facebook
-            </Button>
-            <Button
-              href={siteConfig.social.googleBusiness}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="secondary"
-              className="w-full sm:w-auto"
-            >
-              Leave Us a Google Review
-            </Button>
-          </div>
         </div>
         <ContactForm />
       </div>
