@@ -37,6 +37,7 @@ export function ContactSection() {
             Always open to discussing new work. Site visits and projects are
             scheduled flexibly based on location, conditions, and availability.
           </p>
+
         </div>
         <ContactForm />
       </div>
