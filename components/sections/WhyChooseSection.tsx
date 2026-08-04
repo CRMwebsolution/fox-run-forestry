@@ -1,4 +1,6 @@
 import { Section } from "@/components/ui/Section";
+import { Button } from "@/components/ui/Button";
+import { siteConfig } from "@/config/siteConfig";
 
 const reasons = [
   {
@@ -61,6 +63,18 @@ export function WhyChooseSection() {
             finished result you want.
           </p>
         </div>
+      </div>
+
+      <div className="mt-10 text-center sm:mt-12">
+        <Button
+          href={siteConfig.social.googleBusiness}
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="secondary"
+          className="w-full sm:w-auto"
+        >
+          Read the Reviews or Leave Us One
+        </Button>
       </div>
     </Section>
   );
