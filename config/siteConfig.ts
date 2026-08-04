@@ -78,8 +78,8 @@ export const siteConfig: SiteConfig = {
       "Newport, Carteret County, Craven County, and surrounding Eastern North Carolina communities",
   },
   social: {
-    facebook: "https://www.facebook.com/foxrunforestryllc",
-    googleBusiness: "https://www.google.com/search?q=Fox+Run+Forestry+LLC",
+    facebook: "https://www.facebook.com/profile.php?id=61590583590279",
+    googleBusiness: "https://www.google.com/search?q=Fox+Run+Forestry+LLC#lrd=0x6986c64c6fd90661:0x764e031f0de35c81,1,,,,",
   },
   navigation: [
     { label: "Services", href: "#services", isAnchor: true },
