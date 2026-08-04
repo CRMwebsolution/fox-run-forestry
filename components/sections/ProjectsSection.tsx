@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 import { Section } from "@/components/ui/Section";
 import { ImageComparison } from "@/components/ui/ImageComparison";
+import { Button } from "@/components/ui/Button";
 import { supabase } from "@/lib/supabase/client";
+import { siteConfig } from "@/config/siteConfig";
 import type { GalleryItem } from "@/types/gallery";
 
 const storageBaseUrl =
@@ -141,6 +143,20 @@ export function ProjectsSection() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="mt-10 text-center sm:mt-12">
+        <p className="mb-4 text-sm font-semibold text-brand-muted">
+          Follow along for more recent clearing and mulching projects.
+        </p>
+        <Button
+          href={siteConfig.social.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full sm:w-auto"
+        >
+          Find More Jobs on Facebook
+        </Button>
       </div>
     </Section>
   );
