@@ -59,6 +59,9 @@ export function Footer() {
               SouthernAutomate
             </a>
           </p>
+          <Link href="/privacy" className="hover:text-brand-cream">
+            Privacy Policy
+          </Link>
           <Link href="#top" className="hover:text-brand-cream">
             Back to top ↑
           </Link>
