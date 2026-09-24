@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { Lora, Manrope } from "next/font/google";
 import { Layout } from "@/components/layout/Layout";
@@ -102,6 +103,16 @@ export default function RootLayout({
       <body className={`${manrope.variable} ${lora.variable} antialiased`}>
         <Layout>{children}</Layout>
         <Analytics />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-L4SQBDKQ0F"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag("js", new Date());
+          gtag("config", "G-L4SQBDKQ0F");
+        `}</Script>
       </body>
     </html>
   );
